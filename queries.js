@@ -100,7 +100,7 @@ async function getStudents(req, res) {
             studentInformation.push(student)
 
         }
-        
+
         return res.status(200).json(studentInformation)
     } catch (error) {
         console.log(error)

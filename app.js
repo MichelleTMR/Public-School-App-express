@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 app.post('/login', queries.login)
 
 //student profile
-app.get('/students', queries.getStudents)
+app.get('/students', tokenManager.authenicateToken, queries.getStudents)
 
 app.listen(3000)
 console.log("Express app is running!")
